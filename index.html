@@ -7,7 +7,7 @@
     <title>Hello, world!</title>
     <style media="screen">
       div div {
-        background-color: purple;
+        background-color: darkred;
         border: 1px solid black;
         color: white
       }
@@ -24,10 +24,14 @@
         background-color: white;
       }
       .textcolor {
-        color: black;
+        color: white;
       }
       .align{
         text-align: center;
+      }
+      .joey {
+        height:750px;
+        width:800px;
       }
     </style>
   </head>
@@ -58,15 +62,35 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Checkout</a>
         </li>
       </ul>
-
-      <div class="background" class="jumbotron jumbotron-fluid">
+      <div  class="row justify-content-around"  class="background" class="jumbotron jumbotron-fluid">
         <h1 class="textcolor" class="display-4">Season 1 Release</h1>
-        <p class="textcolor" class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p class="textcolor" class="lead">After the release of the Season One collection, we will be releasing the second collection in the upcoming months.</p>
         <hr class="my-4">
-        <p class="textcolor">It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <a class="btn btn-danger btn-lg" href="#" role="button" >Learn About The Upcoming Season Now!</a>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#exampleModal">
+          Sneak Peak Of The Upcoming Season
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This part of our website is currently down
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Go back to the Store</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
     <div class="row justify-content-around">
       <div class="align" class="col-lg-4 col-md-4 col-sm-12">
         <div class="card" style="width: 18rem;">
@@ -78,52 +102,75 @@
       </div>    <!-- END COL DIV -->
       <div class="align" class="col-lg-4 col-md-4 col-sm-12">
         <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
+          <img src="img/sweatpants.png" class="card-img-top" alt="Sweatpants">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">$20.00 Unburnt Sweatpants</p>
           </div>
         </div>
       </div>    <!-- END COL DIV -->
       <div class="align" class="col-lg-4 col-md-4 col-sm-12">
         <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
+          <img src="img/hat.png" class="card-img-top" alt="Hat">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">$15.00 Unburnt Hat</p>
           </div>
         </div>
       </div>    <!-- END COL DIV -->
       <div class="align" class="col-lg-4 col-md-4 col-sm-12">
         <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
+          <img src="img/long.png" class="card-img-top" alt="Long">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">$18.00 Long Sleeve Shirt</p>
           </div>
         </div>
       </div>    <!-- END COL DIV -->
       <div class="align" class="col-lg-4 col-md-4 col-sm-12">
         <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
+          <img src="img/jersey.png" class="card-img-top" alt="Jersey">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">$35.00 Basketball Jersey</p>
           </div>
         </div>
       </div>    <!-- END COL DIV -->
       <div class="align" class="col-lg-4 col-md-4 col-sm-12">
         <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
+          <img src="img/tank.png" class="card-img-top" alt="Tank">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">$22.00 Sleeveless Shirt</p>
           </div>
         </div>
       </div>    <!-- END COL DIV -->
     </div>    <!-- END ROW DIV -->
-
+    <form>
+      <div class="row justify-content-center" class="form-row align-items-center">
+        <div class="col-auto my-1">
+          <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Choose Size...</option>
+            <option value="1">Extra Small</option>
+            <option value="2">Small</option>
+            <option value="3">Medium</option>
+            <option value="4">Large</option>
+            <option value="5">Extra Large</option>
+          </select>
+        </div>
+        <div class="col-auto my-1">
+          <div class="custom-control custom-checkbox mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+            <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+          </div>
+        </div>
+        <div class="col-auto my-1">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
       <div class="row">
-        <div class="col-lg-7 col-md-6 col-sm-12">
-          <img class="sweathshirt" src="img/sweatshirt.png" alt="Unburnt Sweatshirt">
+        <div class="row justify-content-center" class="col-lg-6 col-md-6 col-sm-12">
+          <img class="joey" src="img/joey.png" class="img-fluid" alt="Responsive image">
         </div>    <!-- END COL DIV -->
-        <div class="col-lg-5 col-md-6 col-sm-12">
-          <img src="img/unburnt.jpg" alt="Unburnt Co">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <img class="joey" class="row justify-content-center" src="img/unburnt.jpg" alt="Unburnt Co">
         </div>    <!-- END COL DIV -->
       </div>    <!-- END ROW DIV -->
     </div>    <!-- END CONTAINER DIV -->
